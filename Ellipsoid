@@ -1,0 +1,98 @@
+package ellipsoid;
+
+
+public class Ellipsoid {
+
+    double radius1;
+    double radius2;
+    double a;
+    double b;
+    double c;
+    static final double PI;
+
+
+
+    static {
+        PI = 3.14;
+    }
+   
+    Ellipsoid() {
+    }
+
+   Ellipsoid(double radius1, double radius2, double a, double b, double c) {
+        this.radius1 = radius1;
+        this.radius2 = radius2;
+        this.a = a;
+        this.b = b;
+        this.c = c;
+
+    }
+   
+    void displayInfoAboutEllipsoid () {
+    System.out.println("Radius1: " + this.radius1);
+    System.out.println("Radius2: " + this.radius2);
+    System.out.println("a: " + this.a);
+     System.out.println("b: " + this.b);
+      System.out.println("c: " + this.c);
+    System.out.println("PI: " + PI);
+    }
+   
+     void getArea () {
+    System.out.println("Полученная площадь эллипсоида: " + (4*PI*a*b*c)/3);
+    }
+    public static void main(String[] args) {
+        // TODO code application logic here
+       
+         Ellipsoid  ellipsoid = new  Ellipsoid ();
+         ellipsoid.radius1 = 4.7;
+         ellipsoid.radius2 = 43.9;
+         ellipsoid.a = 5.0;
+         ellipsoid.b = 12.0;
+         ellipsoid.c = 45.0;
+         ellipsoid.displayInfoAboutEllipsoid();
+         ellipsoid.getArea();
+    }
+   
+}
+ 
+package javaapplication65;
+import static java.lang.Math.*;
+ 
+public class Sphere {
+ 
+    double radius;
+    static final double PI;
+ 
+ 
+ 
+    static {
+        PI = 3.14;
+    }
+ 
+     Sphere() {
+    }
+ 
+    Sphere(double radius) {
+        this.radius = radius;
+ 
+    }
+   
+    void displayInfoAboutSphere () {
+    System.out.println("Radius: " + this.radius);
+    System.out.println("PI: " + PI);
+    }
+   
+    void getVolume () {
+    System.out.println(pow(this.radius, 3)*PI);
+    }
+   
+    public static void main(String[] args) {
+         
+       Sphere sphere = new Sphere ();
+        sphere.radius = 5.8;
+        sphere.displayInfoAboutSphere();
+        sphere.getVolume();
+    }
+   
+}
+
