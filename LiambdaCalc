@@ -1,0 +1,64 @@
+package liambdacalc;
+
+import java.util.Scanner;
+
+public class LiambdaCalc {
+
+   static Scanner scanner = new Scanner(System.in);
+   
+    public static void main(String[] args) {
+      
+          Operationable operation;
+          calc();
+          System.out.println(result);
+    }
+   
+       
+
+        static double firstNum = scanner.nextInt();
+        static double secondNum = scanner.nextInt();
+        static double result = 0;
+        static char operat = scanner.next().charAt(0);
+
+     
+       
+       
+        public static void calc () {
+            Operationable operation;
+        switch (operat) {
+            case '+':
+                operation = (x, y) -> x+y;
+                result = operation.calculate(firstNum, secondNum);
+                break;
+            case '-':
+                operation = (x, y) -> x-y;
+                result = operation.calculate(firstNum, secondNum);
+                 break;
+            case '*':
+                operation = (x, y) -> x*y;
+                result = operation.calculate(firstNum, secondNum);
+                break;
+            case '/':
+                operation = (x, y) -> x/y;
+                result = operation.calculate(firstNum, secondNum);
+                break;
+            case '%':
+                operation = (x, y) -> x%y;
+                result = operation.calculate(firstNum, secondNum);
+                break;
+                default:
+                System.out.println("Try again!");
+                       
+        }
+     
+        }
+       
+   
+}
+
+
+interface Operationable {
+double calculate (double x, double y);
+}
+
+
