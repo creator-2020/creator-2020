@@ -1,0 +1,50 @@
+package stringreplace;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class StringReplace {
+
+    public static void main(String[] args) throws IOException {
+              BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
+
+        //  ArrayList<String> strings = new ArrayList<>();
+        // String ss = "";
+        // for (int i =0; i<10; i++)
+        // {String s = rd.readLine();
+        // strings.add(s); // заполняем массив строками
+        // if (strings.get(i).length()>ss.length())
+        // {ss = strings.get(i);
+        //     System.out.println(i);}  // находим и выводим номер самой длинной строки
+        // else if (strings.get(i).length()==ss.length())
+        // {System.out.println(i);} // если строки равны, то выводим их номер
+        //     }
+        //   for (int i =0; i<10; i++)
+        //   {String s = rd.readLine().trim();
+        //   strings.add(s); // заполняем массив строками
+        //}
+        //    for (int i =0; i<10; i++)
+        //     { System.out.println(strings.get(i)); // заполняем массив строками
+        // }
+//       System.out.println("Введите строку: ");
+//       String s = rd.readLine();
+//      
+//         System.out.println("Введите подстроку для замены и на что заменить: ");
+//        String s2 = s.replace(rd.readLine(),rd.readLine());
+//        System.out.println(s2);
+        System.out.println("Введите строку: ");
+String str1 = new String(rd.readLine());
+String str2 = new String(str1.);
+        StringBuffer str = new StringBuffer(rd.readLine());
+        StringBuffer buffer = new StringBuffer(str.reverse());
+        System.out.println("Перевернутая строка: " + buffer);
+        if (str.equals(buffer)) {
+            System.out.println("Строка палиндром");
+        }
+    }
+}
+
+
