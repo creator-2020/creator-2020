@@ -1,0 +1,71 @@
+package family;                                                                                                                                                     
+                                                                                                                                                     
+                                           
+import java.util.ArrayList;                                                                                                                                                   
+                                                                                                                                                     
+public class Family {                                                                                                                                                     
+	public static void main(String[] args) {                                                                                                                                                     
+    	                                                                                                  
+ArrayList<Human> list = new ArrayList<>();                                                                                                   
+                                                                                                   
+Human ded1 = new Human("Максим", true, 70);                                                                                                   
+list.add(ded1);                                                                                                   
+Human ded2 = new Human("Николай", true, 80);                                                                                                   
+list.add(ded2);                                                                                                   
+Human bab1 = new Human("Маша", false, 81);                                                                                                   
+list.add(bab1);                                                                                                   
+Human bab2 = new Human("Вика", false, 60);                                                                                                   
+list.add(bab2);                                                                                                   
+Human otec = new Human("Евгений", true, 44, ded1, bab1);                                                                                                   
+list.add(otec);                                                                                                   
+Human mat = new Human("Оля", false, 37, ded2, bab2);                                                                                                   
+list.add(mat);                                                                                                   
+Human child1 = new Human("Петя", true, 10, otec, mat);                                                                                                   
+list.add(child1);                                                                                                   
+Human child2 = new Human("Катя", false, 12, otec, mat);                                                                                                   
+list.add(child2);                                                                                                   
+Human child3 = new Human("Ева", false, 14, otec, mat);                                                                                                   
+list.add(child3);                                                                                                   
+                                                                                                   
+for (Human i : list)                                                                                                   
+{System.out.println(i); }                                                                                                                                                   
+	}                                                                                                                                                     
+                                                                                                                                                     
+	public static class Human {                                                                                                                                                     
+    	                                                                                               
+String name;                                                                                                   
+boolean sex;                                                                                                   
+int age;                                                                                                   
+Human father;                                                                                                   
+Human mother;                                                                                                   
+                                                                                                   
+public Human (String name, boolean sex, int age)                                                                                                   
+{ this.name = name;                                                                                                   
+this.sex = sex;                                                                                                   
+this.age = age; }                                                                                                   
+                                                                                                   
+public Human (String name, boolean sex, int age, Human father, Human mother)                                                                                                   
+{ this.name = name;                                                                                                   
+this.age = age;                                                                                                   
+this.sex = sex;                                                                                                   
+this.father = father;                                                                                                   
+this.mother = mother;}                                                                                                                                                   
+                                                                                                                                                     
+    	public String toString() {                                                                                                                                                     
+        	String text = "";                                                                                                                                                     
+        	text += "Имя: " + this.name;                                                                                                                                                     
+        	text += ", пол: " + (this.sex ? "мужской" : "женский");                                                                                                                                                     
+        	text += ", возраст: " + this.age;                                                                                                                                                     
+                                                                                                                                                     
+        	if (this.father != null) {                                                                                                                                                     
+            	text += ", отец: " + this.father.name;                                                                                                                                                     
+        	}                                                                                                                                                     
+                                                                                                                                                     
+        	if (this.mother != null) {                                                                                                                                                     
+            	text += ", мать: " + this.mother.name;                                                                                                                                                     
+        	}                                                                                                                                                     
+                                                                                                                                                     
+        	return text;                                                                                                                                                     
+    	}                                                                                                                                                     
+	}                                                                                                                                                     
+} 
